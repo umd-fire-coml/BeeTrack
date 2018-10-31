@@ -1,1 +1,4 @@
-TODO
+numpy
+matplotlib
+torchvision
+ipython
