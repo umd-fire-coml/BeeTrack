@@ -16,6 +16,10 @@ How do you get started? Clone their repo and run an image such as this one:
 
 ![alt image](TernausNet/the_smaller_image.png)
 
+To run the code is simple. Use pip or anaconda with the requirements.txt to install requirements.
+ 
+Then making sure you have a way to open the jupyter notebook. Run all the code and voila, done!
+
 Here is an output:
 
 ![alt image](output.png)
