@@ -1,14 +1,16 @@
 # BeeTrack
 work in progress. We are trying to track bees with CNNs.
-We tried this model:
 
+We first was thinking of implementing this model:
 
 ![alt image](model_plot.png)
 
 
 Now we are using Ternaus.
 
-How do you get started? Clone their thing and run the image.
+How do you get started? Clone their repo and run an image such as this one:
+
+![alt image](the_small_image.png)
 
 Here is an output:
 FOO
