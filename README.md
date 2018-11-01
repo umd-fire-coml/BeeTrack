@@ -13,4 +13,5 @@ How do you get started? Clone their repo and run an image such as this one:
 ![alt image](TernausNet/the_smaller_image.png)
 
 Here is an output:
-FOO
+
+![alt image](output.png)
