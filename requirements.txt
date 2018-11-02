@@ -3,3 +3,16 @@ matplotlib
 torchvision
 ipython
 opencv-python
+pandas
+future
+apiclient
+httplib2
+oauth2client
+google-api-python-client 
+synapseclient
+#time
+#os
+#sys
+#multiprocessing.pool
+#getpass
+#io
