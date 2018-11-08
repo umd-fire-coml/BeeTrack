@@ -12,13 +12,15 @@ Originally, we were going through the process of implementing this model:
 
 Now we are using Ternaus.
 
-How do you get started? Clone their repo and run an image such as this one:
+# Getting Started
+* [demo.ipynb](samples/demo.ipynb) This code clones the Ternaus Net repo and run an image such as this one:
 
 ![alt image](TernausNet/the_smaller_image.png)
 
-To run the code is simple. Use pip or anaconda with the requirements.txt to install requirements.
- 
-Then making sure you have a way to open the jupyter notebook. Run all the code and voila, done!
+Running the code is simple:
+1) Use pip or anaconda with the requirements.txt to install requirements.
+2) Run the demo.ipynb
+(Open/run the jupyter notebook.)
 
 Here is an output:
 
