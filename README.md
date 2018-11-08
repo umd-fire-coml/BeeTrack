@@ -13,7 +13,7 @@ Originally, we were going through the process of implementing this model:
 Now we are using Ternaus.
 
 # Getting Started
-![demo.ipynb](samples/demo.ipynb) This code clones the Ternaus Net repo and run an image such as this one:
+* [demo.ipynb](demo.ipynb) This code clones the Ternaus Net repo and run an image such as this one:
 
 ![alt image](TernausNet/the_smaller_image.png)
 
