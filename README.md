@@ -7,7 +7,7 @@ The problem with that is we literally don't have a dataset. We are labeling bees
 
 So we don't have a dataset actually. However, we are gratefull for the bee videos sent to us from the Biorobotics Lab at the Free University of Berlin. Here are the videos:
 
-https://drive.google.com/drive/u/1/folders/1Mx3yAJn2YVNs1iivuREKL6HTq9hkssqH
+https://drive.google.com/drive/folders/1Mx3yAJn2YVNs1iivuREKL6HTq9hkssqH
 
 Originally, we were going through the process of implementing this model:
 
