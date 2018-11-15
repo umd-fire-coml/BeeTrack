@@ -5,6 +5,10 @@ Currently, we are unsure if we want to track physically unmarked bees or not. We
 
 The problem with that is we literally don't have a dataset. We are labeling bees on our own. It is estimated to take +5 minutes per image (according to Mr. Ho)
 
+So we don't have a dataset actually. However, we are gratefull for the bee videos sent to us from the Biorobotics Lab at the Free University of Berlin. Here are the videos:
+
+https://drive.google.com/drive/u/1/folders/1Mx3yAJn2YVNs1iivuREKL6HTq9hkssqH
+
 Originally, we were going through the process of implementing this model:
 
 ![alt image](model_plot.png)
