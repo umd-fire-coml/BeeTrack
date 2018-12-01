@@ -191,7 +191,6 @@ If you use Docker, the code has been verified to work on
 If you extend this model to other datasets or build projects that use it, we'd love to hear from you.
 
 ### [4K Video Demo](https://www.youtube.com/watch?v=OOT3UIXZztE) by Karol Majek.
-[![Mask RCNN on 4K Video](assets/4k_video.gif)](https://www.youtube.com/watch?v=OOT3UIXZztE)
 
 ### [Images to OSM](https://github.com/jremillard/images-to-osm): Improve OpenStreetMap by adding baseball, soccer, tennis, football, and basketball fields.
 
