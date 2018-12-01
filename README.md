@@ -19,7 +19,7 @@ Now we are using Ternaus.
 # Getting Started
 * [demo.ipynb](demo.ipynb) This code clones the Ternaus Net repo and run an image such as this one:
 
-![alt image](TernausNet/the_smaller_image.png)
+![alt image](the_smaller_image.png)
 
 Running the code is simple:
 1) Use pip or anaconda with the requirements.txt to install requirements.
