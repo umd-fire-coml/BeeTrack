@@ -4,7 +4,7 @@ By [Vladimir Iglovikov](https://www.linkedin.com/in/iglovikov/) and [Alexey Shve
 
 # Introduction
 
-We are no longer using this network because we have moved on to multiple instance segmentation.
+(The BeeTrack repo is no longer using this network because we have moved on to multiple instance segmentation.)
 
 TernausNet is a modification of the celebrated UNet architecture that is widely used for binary Image Segmentation. For more details, please refer to our [arXiv paper](https://arxiv.org/abs/1801.05746).
 
