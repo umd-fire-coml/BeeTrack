@@ -1143,7 +1143,6 @@ def mrcnn_bbox_loss_graph(target_bbox, target_class_ids, pred_bbox):
 
 def mrcnn_mask_loss_graph(target_masks, target_class_ids, pred_masks):
     """Mask binary cross-entropy loss for the masks head.
-
     target_masks: [batch, num_rois, height, width].
         A float32 tensor of values 0 or 1. Uses zero padding to fill array.
     target_class_ids: [batch, num_rois]. Integer class IDs. Zero padded.
@@ -1171,13 +1170,40 @@ def mrcnn_mask_loss_graph(target_masks, target_class_ids, pred_masks):
     y_true = tf.gather(target_masks, positive_ix)
     y_pred = tf.gather_nd(pred_masks, indices)
 
+    #################
+    # CUSTOM LOSS CODE BY DEREK ZHANG
+    # BCE = Binary Cross Entropy
+    # return (BCE outside GT mask) + (BCE inside GT mask) * max(0.7 * GT mask summed - percent GT mask predicted summed, 0)
+    #################
+
+    m_zer = tf.constant(0.0, dtype=tf.float32)
+    m_one = tf.constant(1.0, dtype=tf.float32)
+    m_sev = tf.constant(0.7, dtype=tf.float32)
+    outside = tf.multiply(tf.subtract(m_one, y_true), y_pred)
+    inside = tf.multiply(y_true, y_pred)
+    factor = tf.maximum(tf.subtract(tf.multiply(tf.reduce_sum(y_true), m_sev), tf.reduce_sum(inside)), m_zer)
+
     # Compute binary cross entropy. If no positive ROIs, then return 0.
     # shape: [batch, roi, num_classes]
     loss = K.switch(tf.size(y_true) > 0,
-                    K.binary_crossentropy(target=y_true, output=y_pred),
+                    K.binary_crossentropy(target=tf.zeros_like(outside), output=outside),
                     tf.constant(0.0))
     loss = K.mean(loss)
-    return loss
+
+    loss_in = K.switch(tf.size(y_true) > 0,
+                    K.binary_crossentropy(target=y_pred, output=inside),
+                    tf.constant(0.0))
+    loss_in = K.mean(loss_in)
+
+    return tf.add(loss, tf.multiply(factor, loss_in))
+
+    # Compute binary cross entropy. If no positive ROIs, then return 0.
+    # shape: [batch, roi, num_classes]
+    # loss = K.switch(tf.size(y_true) > 0,
+    #                 K.binary_crossentropy(target=y_true, output=y_pred),
+    #                 tf.constant(0.0))
+    # loss = K.mean(loss)
+    # return loss
 
 
 ############################################################
