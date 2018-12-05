@@ -2,7 +2,7 @@ content = None
 with open('/Volumes/RAM_Disk/training_results.txt') as file:
 	content = file.readlines()
 import re
-p2 = r'.*loss: (\d\.\d*)\s'#.*val_loss: (\d\.\d*)\s'
+p2 = r'.*s/step - loss: (\d\.\d*)\s'#.*val_loss: (\d\.\d*)\s'
 p = re.compile(p2, re.IGNORECASE)#('.*val\\_loss: (\\d\\.\\d*)\\s', re.IGNORECASE)
 i=0
 for line in content:
