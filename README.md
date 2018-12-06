@@ -1,7 +1,7 @@
 # BeeTrack
 This is a work in progress. We are trying to track bees with CNNs.
 
-![alt image](bee_trained.png)
+![alt image](bee_trained180.png)
 
 Here are the weights for epoch 180.
 
