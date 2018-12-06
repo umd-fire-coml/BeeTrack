@@ -1,5 +1,5 @@
 # BeeTrack
-This is a work in progress. We are trying to track bees with CNNs.
+This is (was?) a work in progress. We were trying to track bees with CNNs.
 
 ![alt image](bee_train180.png)
 
