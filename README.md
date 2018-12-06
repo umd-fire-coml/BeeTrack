@@ -1,6 +1,12 @@
 # BeeTrack
 This is (was?) a work in progress. We were trying to track bees with CNNs.
 
+The problem with that is we literally don't have a dataset. However, we are gratefull for the bee videos sent to us from the Biorobotics Lab at the Free University of Berlin. Here are the videos:
+
+https://drive.google.com/drive/folders/1Mx3yAJn2YVNs1iivuREKL6HTq9hkssqH
+
+https://github.com/BioroboticsLab/
+
 ![alt image](bee_train180.png)
 
 Here are the weights for epoch 180.
@@ -8,12 +14,6 @@ Here are the weights for epoch 180.
 https://drive.google.com/open?id=167kpM5VTyNSJoeaRiNRPEmNfMq--36hj
 
 We tried to track both physically unmarked and marked bees.
-
-The problem with that is we literally don't have a dataset. However, we are gratefull for the bee videos sent to us from the Biorobotics Lab at the Free University of Berlin. Here are the videos:
-
-https://drive.google.com/drive/folders/1Mx3yAJn2YVNs1iivuREKL6HTq9hkssqH
-
-https://github.com/BioroboticsLab/
 
 Originally, we were going through the process of implementing this model:
 
