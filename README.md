@@ -1,7 +1,7 @@
 # BeeTrack
 This is (was?) a work in progress. We were trying to track bees with CNNs.
 
-The problem with that is we literally don't have a dataset. However, we are gratefull for the bee videos sent to us from the Biorobotics Lab at the Free University of Berlin. Here are the videos:
+The problem we had was the lack of a labeled dataset. However, we are grateful for the bee videos sent to us from the Biorobotics Lab at the Free University of Berlin. Here are the videos:
 
 https://drive.google.com/drive/folders/1Mx3yAJn2YVNs1iivuREKL6HTq9hkssqH
 
