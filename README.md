@@ -25,6 +25,10 @@ Then we were going to use TernausNet.
 Now we are using Mask RCNN.
 
 # Getting Started
+* Todo
+
+Look below for legacy stuff
+
 * [demo.ipynb](demo.ipynb) This code clones the Ternaus Net repo and run an image such as this one:
 
 ![alt image](the_smaller_image.png)
