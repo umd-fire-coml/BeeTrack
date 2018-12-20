@@ -879,7 +879,7 @@ def build_rpn_model(anchor_stride, anchors_per_location, depth):
 
 def fpn_classifier_graph(rois, feature_maps, image_meta,
                          pool_size, num_classes, train_bn=True,
-                         fc_layers_size=1024):
+                         fc_layers_size=1024, dropout=None):
     """Builds the computation graph of the feature pyramid network classifier
     and regressor heads.
     rois: [batch, num_rois, (y1, x1, y2, x2)] Proposal boxes in normalized
@@ -913,6 +913,10 @@ def fpn_classifier_graph(rois, feature_maps, image_meta,
 
     shared = KL.Lambda(lambda x: K.squeeze(K.squeeze(x, 3), 2),
                        name="pool_squeeze")(x)
+
+    if dropout:
+        #should the seed be None?
+        shared = KL.Dropout(dropout, noise_shape=None, seed=None, name="mrcnn_class_dropout")
 
     # Classifier head
     mrcnn_class_logits = KL.TimeDistributed(KL.Dense(num_classes),
@@ -1954,7 +1958,8 @@ class MaskRCNN():
                 fpn_classifier_graph(rois, mrcnn_feature_maps, input_image_meta,
                                      config.POOL_SIZE, config.NUM_CLASSES,
                                      train_bn=config.TRAIN_BN,
-                                     fc_layers_size=config.FPN_CLASSIF_FC_LAYERS_SIZE)
+                                     fc_layers_size=config.FPN_CLASSIF_FC_LAYERS_SIZE,
+                                     dropout=config.FPN_CLASS_DROPOUT)
 
             mrcnn_mask = build_fpn_mask_graph(rois, mrcnn_feature_maps,
                                               input_image_meta,
@@ -1994,7 +1999,8 @@ class MaskRCNN():
                 fpn_classifier_graph(rpn_rois, mrcnn_feature_maps, input_image_meta,
                                      config.POOL_SIZE, config.NUM_CLASSES,
                                      train_bn=config.TRAIN_BN,
-                                     fc_layers_size=config.FPN_CLASSIF_FC_LAYERS_SIZE)
+                                     fc_layers_size=config.FPN_CLASSIF_FC_LAYERS_SIZE,
+                                     dropout=config.FPN_CLASS_DROPOUT)
 
             # Detections
             # output is [batch, num_detections, (y1, x1, y2, x2, class_id, score)] in
